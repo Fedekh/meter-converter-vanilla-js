@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.jpg" type="image/x-icon">
+
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Meter Converter📏</title>
+</head>
+
+<body>
+
+    <!--switch light-dark mode-->
+    <section class="toggle">
+        <div class="wrapper-toggle">
+            <input type="checkbox" id="themeSwitch" onchange="toggleTheme()">
+            <i class="fa-solid fa-sun" style="color: #ffdf0f;"></i>
+            <i class="fa-solid fa-moon" style="color: #0050db;"></i>
+        </div>
+    </section>
+    <!--/switch light-dark mode-->
+
+    <!--main section-->
+    <main>
+        <div class="container title">
+            <h1>Meter Converter📏</h1>
+            <img src="./img/img.jpg" alt="">
+        </div>
+
+        <div class="container">
+            <form action="">
+                <div class="task">
+                    <!-- From-->
+                    <div class="from-container task-containers">
+                        <label for="input">From: </label>
+                        <input type="number" placeholder="Input" id="input" >
+                        <select name="from" id="inputType" onchange="conversion()">
+                            <option value=""></option>
+                            <option value="meter">Meter</option>
+                            <option value="kilometer">Kilometer</option>
+                            <option value="centimeter">Centimeter</option>
+                            <option value="foot">Foot</option>
+                            <option value="inch">Inch</option>
+                        </select>
+                    </div>
+                    <!--/ From-->
+
+                    <!--To-->
+                    <div class="to-container task-containers">
+                        <label for="output">To: </label>
+                        <input type="number" placeholder="Output" id="output"  readonly>
+                        <select name="to" id="outputType" onchange="conversion()">
+                            <option value=""></option>
+                            <option value="meter">Meter</option>
+                            <option value="kilometer">Kilometer</option>
+                            <option value="centimeter">Centimeter</option>
+                            <option value="foot">Foot</option>
+                            <option value="inch">Inch</option>
+                        </select>
+                    <!--/To-->
+
+                </div>
+                <button type="reset" onclick="reset()" id="reset">Reset</button>
+            </form>
+        </div>
+    </main>
+    <!--/ main section-->
+
+
+    <script src="./js//script.js"></script>
+</body>
+
+</html>
